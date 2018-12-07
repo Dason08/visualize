@@ -26,17 +26,17 @@ def Grad_Cam_plus_plus(input_model, layer_name, x, row, col):
 
     model = input_model
 
-    # 前処理
+    #前処理
     X = np.expand_dims(x, axis=0)
     X = X.astype('float32')
     preprocessed_input = X / 255.0
 
 
-    # 予測クラスの算出
+    #予測クラスの算出
     predictions = model.predict(preprocessed_input)
     class_idx = np.argmax(predictions[0])
 
-    #  使用する重みの抽出、高階微分の計算
+    #使用する重みの抽出、高階微分の計算
     class_output = model.layers[-1].output
     conv_output = model.get_layer(layer_name).output
     grads = K.gradients(class_output, conv_output)[0]
