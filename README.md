@@ -1,6 +1,6 @@
 # KerasでGrad-CAM++を実装してみよう
 
-このリポジトリは、[Qiitaの記事]()に投稿するために使用したものです。
+このリポジトリは、[Qiitaの記事](https://qiita.com/Dason08/private/a8013b3fa4d303f5c41c)に投稿するために使用したものです。
 
 Grad-CAM++の実装をしてみました。
 
